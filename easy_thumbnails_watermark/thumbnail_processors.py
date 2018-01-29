@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
+
 
 from django.conf import settings
 from django.contrib.staticfiles import finders
@@ -79,7 +79,7 @@ def determine_scale(scale, img, mark):
             pass
 
         errmess = 'Invalid scale value "%s"! Valid values are 1) "F" for ratio-preserving scaling and 2) floating-point numbers and integers greater than 0.' % (scale,)
-        if type(scale) in (str, unicode):
+        if type(scale) in (str, str):
             if scale.lower() == 'f':
                 # scale, but preserve the aspect ratio
                 scale = min(
@@ -112,7 +112,7 @@ def determine_rotation(rotation, mark):
     Determines the number of degrees to rotate the watermark image.
     """
 
-    if (isinstance(rotation, str) or isinstance(rotation, unicode)) \
+    if (isinstance(rotation, str) or isinstance(rotation, str)) \
         and rotation.lower() == 'r':
         rotation = random.randint(0, 359)
     else:
@@ -145,7 +145,7 @@ def determine_position(position, img, mark):
 
     if isinstance(position, tuple):
         left, top = position
-    elif isinstance(position, str) or isinstance(position, unicode):
+    elif isinstance(position, str) or isinstance(position, str):
         position = position.lower()
 
         # corner positioning
