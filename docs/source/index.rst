@@ -10,7 +10,7 @@ Welcome to django-easy-thumbnails-watermark's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   django-easy-thumnails-watermark
+   easy=thumnails_watermark
 
 
 Indices and tables
